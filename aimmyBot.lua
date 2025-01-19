@@ -7,6 +7,6 @@ local function hightlightPlayers(player)
   highlight.OutlineColor = Color3.fromRGB(0, 0, 255)
 end
 
-for _, player in ipairs(Players:GetPlayers()) do
-  highlightPlayers(player)
-end
+Players.PlayerAdded:Connect(function(plr)
+  highlightPlayers(plr)
+end)
